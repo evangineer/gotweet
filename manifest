@@ -1,0 +1,13 @@
+C Refactor\scode.\nRemove\sTwitter\sJSON\swork-around,\sand\sinstead\sinitialize\sa\sslice\swith\slengh=20\sto\sget\sunmarshalled\stweets.
+D 2009-11-13T01:21:03
+F LICENSE b827f469eeff3916d870ac3638025024d73ccd7e
+F src/Makefile 4fbf8bd46d0479c29c1777c820f7352ba1208327
+F src/http_auth.go 00f0634356479ec80c9824b0bf9faa183dbdd4cf
+F src/main.go cd319f5a0ff71550fdedd159cece335e11a638ca
+F src/twitter.go 5ffb362f4733f2ad9463913065a0c5ab924bc203
+F www/index.wiki 499e09d21bded1f6d98931644cbedd5baf89bdf1
+F www/logo.png 283888c3b46a73baf54e6f6886fda79c7ab6791f
+P e0a09f3cd163728408e5942604eaa1eabdec5074
+R 0cea0b7ce702b853719e6d9317c42255
+U dmitry
+Z eace94e9b2e0276adfe5f6d5f43327eb
