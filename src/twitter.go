@@ -51,6 +51,7 @@ const (
 	userTimelineURL		= "http://twitter.com/statuses/user_timeline";	// no .json!
 	publicTimelineURL	= "http://twitter.com/statuses/public_timeline.json";
 	updateURL		= "http://twitter.com/statuses/update.json";
+	directMessagesURL	= "http://twitter.com/direct_messages.json";
 )
 
 func NewTwitter(user, pwd string) *Twitter {
@@ -122,6 +123,10 @@ func (t *Twitter) post(url, s string) (our string, err os.Error) {
 
 func (t *Twitter) Mentions() (string, os.Error) { 
 	return t.getTimeline(mentionsURL)
+}
+
+func (t *Twitter) DirectMessages() (string, os.Error) { 
+	return t.getTimeline(directMessagesURL) 
 }
 
 func (t *Twitter) FriendsTimeline() (string, os.Error) {

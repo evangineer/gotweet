@@ -49,6 +49,7 @@ func Usage() {
 		"  user		Show user timeline. Alias: u\n"
 		"  friends	Show friends timeline. Alias: (nothing)\n"
 		"  mentions	Show mentions. Alias: @\n"
+		"  direct	Show direct messages. Alias: d\n"
 		"  public	Show public timeline\n");
 }
 
@@ -62,6 +63,9 @@ func main() {
 	case "@", "mentions":
 		requireLogin();
 		os.Stdout.WriteString(checkForError(tw.Mentions()));
+	case "d", "direct":
+		requireLogin();
+		os.Stdout.WriteString(checkForError(tw.DirectMessages()));
 	case "", "friends":
 		requireLogin();
 		os.Stdout.WriteString(checkForError(tw.FriendsTimeline()));
