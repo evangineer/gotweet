@@ -47,11 +47,12 @@ type Tweet struct {
 
 const (
 	mentionsURL		= "http://twitter.com/statuses/mentions.json";
+	directMessagesURL	= "http://twitter.com/direct_messages.json";
+	sentURL			= "http://twitter.com/direct_messages/sent.json";
 	friendsTimelineURL	= "http://twitter.com/statuses/friends_timeline.json";
 	userTimelineURL		= "http://twitter.com/statuses/user_timeline";	// no .json!
 	publicTimelineURL	= "http://twitter.com/statuses/public_timeline.json";
 	updateURL		= "http://twitter.com/statuses/update.json";
-	directMessagesURL	= "http://twitter.com/direct_messages.json";
 )
 
 func NewTwitter(user, pwd string) *Twitter {
@@ -127,6 +128,10 @@ func (t *Twitter) Mentions() (string, os.Error) {
 
 func (t *Twitter) DirectMessages() (string, os.Error) { 
 	return t.getTimeline(directMessagesURL) 
+}
+
+func (t *Twitter) Sent() (string, os.Error) { 
+	return t.getTimeline(sentURL) 
 }
 
 func (t *Twitter) FriendsTimeline() (string, os.Error) {
